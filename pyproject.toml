@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "firecrawl>=4.35.0",
     "furl>=2.1.4",
+    "liteparse>=2.8.0",
     "loguru>=0.7.3",
     "markitdown-ocr>=0.1.0",
     "markitdown[all]>=0.1.7",
