@@ -53,6 +53,9 @@ ghostty-list-fonts:
 	ln -s /Applications/Ghostty.app/Contents/MacOS/ghostty ~/bin/ || true
 	~/bin/ghostty +list-fonts
 
+mise:
+	curl https://mise.run || sh
+
 uv:
 	brew install uv || true
 	uv sync --upgrade

@@ -7,13 +7,12 @@ ZSH_THEME="bira"
 DISABLE_MAGIC_FUNCTIONS="true"
 
 plugins=(
+    mise
     brew
     uv
     git
-    tig
     direnv
     history
-    tmux
     eza
     zoxide
     zsh-autosuggestions
