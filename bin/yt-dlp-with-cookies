@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+uv --project ~/.dot add -U yt-dlp
+~/.dot/.venv/bin/yt-dlp --cookies ~/.cookies.txt "$@"
+

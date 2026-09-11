@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-user=${USER}
-file=/etc/sudoers.d/${user}
-echo "${user} ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "${file}"
+echo "${USER} ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee "/etc/sudoers.d/${USER}"
 
+file=/etc/sudoers.d/${USER}
 ls -l "${file}"
-cat "${file}"
 
