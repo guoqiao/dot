@@ -2,6 +2,10 @@
 
 set -ueo pipefail
 
+: "${OPENAI_BASE_URL:?env var missing}"
+: "${OPENAI_API_KEY:?env var missing}"
+: "${OPENAI_MODEL:?env var missing}"
+
 if [[ -t 0 ]]; then
   # no stdin → use arg
   PROMPT="$1"
@@ -9,10 +13,6 @@ else
   # stdin provided
   PROMPT="$(cat)"
 fi
-
-# if ENVRC_FILE exists, source it
-ENVRC_FILE="${ENVRC_FILE:-.envrc}"
-[[ -n "${ENVRC_FILE}" && -e "${ENVRC_FILE}" ]] && source ${ENVRC_FILE} || true
 
 JSON=$(jq -n \
   --arg model "$OPENAI_MODEL" \
@@ -37,6 +37,7 @@ echo ${JSON} | jq | tee request.json
 echo '<think>'
 jq -r '.choices[0].message.reasoning_content' response.json
 echo '</think>'
+echo
 
 jq -r '.choices[0].message.content' response.json
 
