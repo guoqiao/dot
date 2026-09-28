@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+# brew install cliclick
+
+n=60
+while true; do
+    current_time=$((10#$(date +%H%M)))
+    if (( current_time >= 900 && current_time < 1800 )); then
+        cliclick m:+1,+0 m:-1,+0
+        echo "clicked, sleeping ${n}s ..."
+    else
+        echo "outside working hours, sleeping ${n}s ..."
+    fi
+    sleep ${n}
+done
