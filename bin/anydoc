@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+# anydoc input.doc -o output.md
+npx @firecrawl/anydoc $@
+
