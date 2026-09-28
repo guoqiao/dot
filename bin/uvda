@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+uv --project ~/.dot add -U "$@"
+
