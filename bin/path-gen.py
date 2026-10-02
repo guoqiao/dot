@@ -17,7 +17,7 @@ def get_sub_paths(parent, *subdirs):
 PATH = [
     '~/.dot/bin', '~/.dot/.venv/bin',
     '~/bin', '~/.local/bin',
-    '~/.npm-global/bin', '~/.uv-global/bin', '~/.bun/bin',
+    '~/.npm-global/bin', '~/.bun/bin',
     '~/.cargo/bin',
     '~/.amp/bin',
     '~/.browser-use-env/bin',
