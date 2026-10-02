@@ -5,7 +5,6 @@ description = "dot files"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-<<<<<<< HEAD
     "firecrawl>=4.35.0",
     "firecrawl-anydoc>=0.2.4",
     "furl>=2.1.4",
