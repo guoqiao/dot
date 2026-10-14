@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -ueo pipefail
+
+rsync -avzP --remove-source-files --ignore-existing --prune-empty-dirs $@
