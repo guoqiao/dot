@@ -23,6 +23,7 @@ PATH = [
     '~/.browser-use-env/bin',
     '~/.orbstack/bin',
     *get_sub_paths('/home/linuxbrew/.linuxbrew/', 'bin', 'sbin'),
+    '/opt/homebrew/opt/curl/bin',  # curl brew bin
     *get_sub_paths('/opt/homebrew/', 'bin', 'sbin'),
     '/usr/local/cuda/bin',
     *get_sub_paths('/usr/local/', 'bin', 'sbin'),
